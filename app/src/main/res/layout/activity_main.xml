@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/checkered">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:text="@string/name"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/opponent_name"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <TextView
+        android:id="@+id/opponent_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:text="@string/opponent_name"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <Button
+        android:id="@+id/disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:onClick="disconnect"
+        android:text="@string/disconnectBTN"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <Button
+        android:id="@+id/disconnect2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:onClick="findPeople"
+        android:text="@string/start"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/HostStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/disconnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Not a Host" />
+
+    <Button
+        android:id="@+id/drawBtn"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:onClick="drawMode"
+        android:text="@string/drawBtn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/drawingTable"
+        app:layout_constraintStart_toEndOf="@+id/sendBtn"
+        app:layout_constraintTop_toBottomOf="@+id/MessageList"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="264dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:onClick="SendMsg"
+        android:text="@string/sendBtn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/UserMsg"
+        app:layout_constraintTop_toBottomOf="@+id/MessageList" />
+
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="264dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:onClick="clearBtn"
+        android:text="@string/ClearBtn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/brushBtn"
+        app:layout_constraintTop_toBottomOf="@+id/MessageList" />
+
+    <Button
+        android:id="@+id/eraseBtn"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="264dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:onClick="EraserBtn"
+        android:text="@string/EraserBtn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendBtn"
+        app:layout_constraintTop_toBottomOf="@+id/MessageList" />
+
+    <Button
+        android:id="@+id/brushBtn"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="264dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:onClick="btnBrush"
+        android:text="@string/BrushBtn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendBtn"
+        app:layout_constraintTop_toBottomOf="@+id/MessageList" />
+
+    <EditText
+        android:id="@+id/UserMsg"
+        android:layout_width="229dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="256dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MessageList" />
+
+    <ListView
+        android:id="@+id/MessageList"
+        android:layout_width="361dp"
+        android:layout_height="271dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disconnect2" />
+
+    <com.google.location.nearby.apps.pictoChat.DrawingView
+        android:id="@+id/drawingTable"
+        android:layout_width="395dp"
+        android:layout_height="239dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserMsg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/messageBtn"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pictochat"
+        android:onClick="msgMode"
+        android:text="@string/messageBtn"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/drawingTable"
+        app:layout_constraintStart_toEndOf="@+id/sendBtn"
+        app:layout_constraintTop_toBottomOf="@+id/MessageList"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <SeekBar
+        android:id="@+id/BrushSize"
+        android:layout_width="106dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="35"
+        android:progress="10"
+        app:layout_constraintBottom_toTopOf="@+id/drawingTable"
+        app:layout_constraintEnd_toStartOf="@+id/clearBtn"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MessageList"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="115dp"
+        android:layout_height="99dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="236dp"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disconnect2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</android.support.constraint.ConstraintLayout>

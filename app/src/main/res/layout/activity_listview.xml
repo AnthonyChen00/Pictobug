@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Single List Item Design -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:fontFamily="@font/pictochat"
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+
+
+</RelativeLayout>
